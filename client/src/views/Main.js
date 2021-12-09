@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import PersonForm from '../components/PersonForm';
 
 const Main = () => {
-    const [message, setMessage] = useState("Loading...")
-
-    useEffect(() => {
-        axios.get("http://localhost:8000/api")
-        .then(result => setMessage(result.data.message))
-    }, []);
 
     return (
         <div>
-            <h2>Message from the backend: {message}</h2>
+            <PersonForm />
         </div>
     )
 }
 
-export default Main; 
+export default Main;

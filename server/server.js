@@ -18,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded( { extended: true} ) );
 
 require('./routes/person.routes')(app);
+// here we are pulling in the code from the person.routes.js file and
+// adding app in as the argument. app being express() on line 2 above.
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`) )
-
